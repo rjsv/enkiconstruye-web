@@ -1,89 +1,445 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Enki Construye - Diseña y Construye</title>
+        <!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- Custom Fonts -->
+        <link rel="stylesheet" href="custom-font/fonts.css" />
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <!-- Bootsnav -->
+        <link rel="stylesheet" href="css/bootsnav.css">
+        <!-- Fancybox -->
+        <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.5" media="screen" />	
+        <!-- Custom stylesheet -->
+        <link rel="stylesheet" href="css/custom.css" />
+        <!--[if lt IE 9]>
+                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/10.12.2/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/10.12.2/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/10.12.2/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+        <!-- Preloader -->
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                    <div class="object"></div>
+                </div>
+            </div>
+        </div>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        <!--End off Preloader -->
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
-</html>
+        <!-- Header -->
+        <header>
+            <!-- Top Navbar -->
+            <div class="top_nav">
+                <div class="container">
+                    <ul class="list-inline info">
+                        <li><a href="#"><span class="fa fa-phone"></span> 1234 - 5678 - 9012</a></li>
+                        <li><a href="#"><span class="fa fa-envelope"></span> support@Construct.com</a></li>
+                        <li><a href="#"><span class="fa fa-clock-o"></span> Mon - Sat 9:00 - 19:00</a></li>
+                    </ul>
+                    <ul class="list-inline social_icon">
+                        <li><a href=""><span class="fa fa-facebook"></span></a></li>
+                        <li><a href=""><span class="fa fa-twitter"></span></a></li>
+                        <li><a href=""><span class="fa fa-behance"></span></a></li>
+                        <li><a href=""><span class="fa fa-dribbble"></span></a></li>
+                        <li><a href=""><span class="fa fa-linkedin"></span></a></li>
+                        <li><a href=""><span class="fa fa-youtube"></span></a></li>
+                    </ul>			
+                </div>
+            </div><!-- Top Navbar end -->
+
+            <!-- Navbar -->
+            <nav class="navbar bootsnav">
+                <!-- Top Search -->
+                <div class="top-search">
+                    <div class="container">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                            <input type="text" class="form-control" placeholder="Buscar">
+                            <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <!-- Atribute Navigation -->
+                    <div class="attr-nav">
+                        <ul>
+                            <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- Header Navigation -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <a class="navbar-brand" href=""><img class="logo" src="images/logo_enki.png" alt=""></a>
+                    </div>
+                    <!-- Navigation -->
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+                        <ul class="nav navbar-nav menu">
+                            <li><a href="">Inicio</a></li>                    
+                            <li><a href="#about">Nosotros</a></li>
+                            <li><a href="#services">Servicios</a></li>
+                            <li><a href="#portfolio">Proyectos</a></li>
+                            <li><a href="#contact_form">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>   
+            </nav><!-- Navbar end -->
+        </header><!-- Header end -->
+
+
+        <section id="home" class="home">
+            <!-- Carousel -->
+            <div id="carousel" class="carousel slide" data-ride="carousel">
+                <!-- Carousel-inner -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="images/slider_img.jpg" alt="Construction">
+                        <div class="overlay">
+                            <div class="carousel-caption">
+                                <h3>Somos Ingenieros Calificados</h3>
+                                <h1>Servicios de Construction</h1>
+                                <h1 class="second_heading">Creativo & Profesional</h1>
+                                <a href="#about" class="btn know_btn">Saber mas</a>
+                                <a href="#portfolio" class="btn know_btn">Ver proyectos</a>
+                            </div>					
+                        </div>
+                    </div>
+                </div><!-- Carousel-inner end -->
+
+
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+                    <span class="fa fa-angle-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+                    <span class="fa fa-angle-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div><!-- Carousel end-->
+
+        </section>
+
+
+        <!-- About -->
+        <section id="about">
+            <div class="container about_bg">
+                <div class="row">
+                    <div class="col-lg-7 col-md-6">
+                        <div class="about_content">
+                            <h2>Bienvenidos a Nuestra Empresa</h2>
+                            <h3>¿Quienes Somos?</h3>
+                            <p>Enki Construye E.I.R.L. somos una empresa que busca la excelencia en todos nuestros proyectos, contamos con un plantel profesional altamente capacitado y con maquinaria y equipos de ultima generacion.</p>
+                            <p>Nuestra especialidad es el rubro de la construccion tanto en insitutciones Publicas como Privadas realizando trabajos correspondientes a ejecciones de obras de mantenimiento en Asfalto, Areas Verdes, Edificaciones y Construccion.</p>
+                            <a href="#why_us" class="btn know_btn">Saber mas</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-lg-offset-1">
+                        <div class="about_banner">
+                            <img src="images/man.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- About end -->
+
+        <!-- Why us -->
+        <section id="why_us">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="head_title">
+                            <h2>¿Por que Elegirnos?</h2>
+                            <p>Nuestra empresa constructora cuenta con años de experiencia en el sector, brindando servicios de alta calidad y cumpliendo con los estándares más exigentes.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="why_us_item">
+                            <span class="fa fa-leaf"></span>
+                            <h4>Entregamos calidad</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="why_us_item">
+                            <span class="fa fa-futbol-o"></span>
+                            <h4>Siempre a tiempo</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="why_us_item">
+                            <span class="fa fa-group"></span>
+                            <h4>Nos apasiona lo que hacemos</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="why_us_item">
+                            <span class="fa fa-line-chart"></span>
+                            <h4>Trabajo Profesional</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- Why us end -->
+
+        <!-- Services -->
+        <section id="services">
+            <div class="container">
+                <h2>NUESTROS SERVICIOS</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="service_item">
+                            <img src="images/service_img1.jpg" alt="Our Services" />
+                            <h3>GESTION DE OBRAS</h3>
+                            <p>Nuestro equipo de expertos en gestión de obras se encarga de coordinar y supervisar cada etapa del proyecto, desde la planificación hasta la entrega final. Nos aseguramos de que cada aspecto de la construcción se realice de manera eficiente y cumpliendo con los más altos estándares de calidad.</p>
+                            <a href="#portfolio" class="btn know_btn">Saber mas</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service_item">
+                            <img src="images/service_img2.jpg" alt="Our Services" />
+                            <h3>RENOVACION</h3>
+                            <p>Nuestro servicio de renovación te brinda la oportunidad de revitalizar y mejorar tu propiedad. Contamos con experiencia en renovaciones de todo tipo, desde pequeñas remodelaciones hasta proyectos de gran envergadura.</p>
+                            <a href="#portfolio" class="btn know_btn">Saber mas</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service_item">
+                            <img src="images/service_img3.jpg" alt="Our Services" />
+                            <h3>ARQUITECTURA</h3>
+                            <p>Nuestro equipo de arquitectos altamente capacitados está listo para diseñar y crear espacios arquitectónicos inspiradores y funcionales. Ya sea que necesites un diseño para una nueva construcción o una renovación, trabajaremos contigo para plasmar tus ideas y convertirlas en realidad.</p>
+                            <a href="#portfolio" class="btn know_btn">Saber mas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- Services end -->
+
+        <!-- Portfolio -->
+        <section id="portfolio">
+            <div class="container portfolio_area text-center">
+                <h2>Nuestros Proyectos</h2>
+                <p>Estamos ejecutando grandes obras y proyectos tanto en Arequipa como en Provincias; la experiencia, satisfacción y confianza de nuestros clientes han impulsado nuestro crecimiento.
+
+                </p>
+
+                <div id="filters">
+                    <button class="button is-checked" data-filter="*">Show All</button>
+                    <button class="button" data-filter=".buildings">Buildings</button>
+                    <button class="button" data-filter=".interior">Interior Design</button>
+                    <button class="button" data-filter=".isolation">Isolation</button>
+                    <button class="button" data-filter=".plumbing">Plumbing</button>
+                </div>
+                <!-- Portfolio grid -->		
+                <div class="grid">
+                    <div class="grid-sizer"></div>
+                    <div class="grid-item grid-item--width2 grid-item--height2 buildings plumbing interior">
+                        <img alt="" src="images/portafolio000.jpeg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/portafolio000.jpeg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><span class="fa fa-search"></span></a>
+                            <a href="#"><span class="fa fa-link"></span></a>
+                        </div>  
+                    </div>
+
+                    <div class="grid-item buildings interior isolation">
+                        <img alt="" src="images/portafolio001.jpeg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/portafolio001.jpeg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><span class="fa fa-search"></span></a>
+                            <a href="#"><span class="fa fa-link"></span></a>
+                        </div>   
+                    </div>
+
+                    <div class="grid-item interior plumbing isolation">
+                        <img alt="" src="images/portafolio002.jpeg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/portafolio002.jpeg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><span class="fa fa-search"></span></a>
+                            <a href="#"><span class="fa fa-link"></span></a>
+                        </div>  
+                    </div>
+
+                    <div class="grid-item isolation buildings">
+                        <img alt="" src="images/portafolio003.jpeg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/portafolio003.jpeg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><span class="fa fa-search"></span></a>
+                            <a href="#"><span class="fa fa-link"></span></a>
+                        </div>  
+                    </div>
+
+                    <div class="grid-item plumbing isolation">
+                        <img alt="" src="images/portafolio004.jpeg" >
+                        <div class="portfolio_hover_area">
+                            <a class="fancybox" href="images/portafolio004.jpeg" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><span class="fa fa-search"></span></a>
+                            <a href="#"><span class="fa fa-link"></span></a>
+                        </div>  
+                    </div>
+                </div><!-- Portfolio grid end -->
+            </div>
+        </section><!-- Portfolio end -->
+
+        <!-- Testimonial -->
+        <section id="testimonial">
+            <div class="container text-center testimonial_area">
+                <h2>Reseñas</h2>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,</p>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="testimonial_item">
+                            <div class="testimonial_content text-left">
+                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,</p>
+                            </div>
+                            <img src="images/testimonial_img1.png" alt="Testimonial" />
+                            <p class="worker_name">john smith</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial_item">
+                            <div class="testimonial_content">
+                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,</p>
+                            </div>
+                            <img src="images/testimonial_img2.png" alt="Testimonial" />
+                            <p class="worker_name">john smith</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial_item">
+                            <div class="testimonial_content">
+                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,</p>
+                            </div>
+                            <img src="images/testimonial_img1.png" alt="Testimonial" />
+                            <p class="worker_name">john smith</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- Testimonial end -->
+
+        <!-- Contact form -->
+        <section id="contact_form">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>¿Tiene usted alguna pregunta?</h2>
+                        <h2 class="second_heading">Contactanos ahora!</h2>
+                    </div>
+                    <form role="form" class="form-inline text-right col-md-6" >
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" placeholder="Nombre">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" id="msg" placeholder="Mensaje"></textarea>
+                        </div>
+                        <button type="submit" class="btn submit_btn">Enviar</button>
+                    </form>				
+                </div>
+            </div>
+        </section><!-- Contact form end -->
+
+        <!-- Footer -->
+        <footer>
+            <!-- Footer top -->
+            <div class="container footer_top">
+                <div class="row">
+                    <div class="col-lg-4 col-sm-7">
+                        <div class="footer_item">
+                            <h4>Acerca de la Empresa</h4>
+                            <img class="logo" src="images/logo_enki.png" alt="Construction" />
+                            <p>Somos una empresa que busca la excelencia en todos nuestros proyectos, contamos con un plantel profesional altamente capacitado y con maquinaria y equipos de ultima generacion.</p>
+
+                            <ul class="list-inline footer_social_icon">
+                                <li><a href=""><span class="fa fa-facebook"></span></a></li>
+                                <li><a href=""><span class="fa fa-twitter"></span></a></li>
+                                <li><a href=""><span class="fa fa-youtube"></span></a></li>
+                                <li><a href=""><span class="fa fa-google-plus"></span></a></li>
+                                <li><a href=""><span class="fa fa-linkedin"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-5">
+                        <div class="footer_item">
+                            <h4>Enlaces</h4>
+                            <ul class="list-unstyled footer_menu">
+                                <li><a href=""><span class="fa fa-play"></span> Inicio</a>
+                                <li><a href=""><span class="fa fa-play"></span> Nosotros</a>
+                                <li><a href=""><span class="fa fa-play"></span> Servicios</a>
+                                <li><a href=""><span class="fa fa-play"></span> Proyectos</a>
+                                <li><a href=""><span class="fa fa-play"></span> Contacto</a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-7">
+                        <div class="footer_item">
+                            <h4>Certificaciones</h4>
+                            <ul class="list-unstyled post">
+                                <img class="logo" src="images/logo_seace.jpg" alt="">
+                                <img class="logo" src="images/logo_sgs.png" alt="">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-5">
+                        <div class="footer_item">
+                            <h4>Contacto</h4>
+                            <ul class="list-unstyled footer_contact">
+                                <li><a href=""><span class="fa fa-map-marker"></span> 124 New Line, London UK</a></li>
+                                <li><a href=""><span class="fa fa-envelope"></span> hello@psdfreebies.com</a></li>
+                                <li><a href=""><span class="fa fa-mobile"></span><p>+44 00 00 1234 <br />+44 00 00 1234</p></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Footer top end -->
+
+            <!-- Footer bottom -->
+            <div class="footer_bottom text-center">
+                <p class="wow fadeInRight">
+                    2023 © Todos los Derechos Reservados.
+                    Diseñado por
+                    <a target="_blank" href="http://bootstrapthemes.co">SoftLab Studio</a>
+                </p>
+            </div><!-- Footer bottom end -->
+        </footer><!-- Footer end -->
+
+        <!-- JavaScript -->
+        <script src="js/jquery-1.12.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- Bootsnav js -->
+        <script src="js/bootsnav.js"></script>
+
+        <!-- JS Implementing Plugins -->
+        <script src="js/isotope.js"></script>
+        <script src="js/isotope-active.js"></script>
+        <script src="js/jquery.fancybox.js?v=2.1.5"></script>
+
+        <script src="js/jquery.scrollUp.min.js"></script>
+
+        <script src="js/main.js"></script>
+    </body>	
+</html>	
